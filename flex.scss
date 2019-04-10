@@ -44,6 +44,7 @@ header {
     padding: 10px 15px;
     box-sizing: border-box;
     background-color:  #2b5278 ;
+    position: relative;
 
 
         h1 {
@@ -52,13 +53,27 @@ header {
             color: #5a98d8;;
             margin-bottom: 5px;
         }
-        p {
+        span {
             margin: 0;
             display: inline-block;
             margin-right: 20px;
             color: #c2c2c2;
         }
+
+        button {
+        position: absolute;
+        right: 0;
+        top: 10px; 
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+            i {
+                font-size: 24px;
+                color: #5a98d8;
+            }    
         }
+        }
+        
 
 .mssg-window {
     height: 600px;
@@ -81,25 +96,23 @@ header {
             border-right: 2px solid #182533;
             font-size: 11px;
             justify-content: space-between;
-            align-content: center;
-            padding: 20px;
+            align-items: center;
+            padding: 15px;
             box-sizing: border-box;
 
             .initials {
                 margin: 0;
                 font-size: 20px;
-                // background-color: rgb(14, 212, 212);
                 border-radius: 50%;
                 height: 50px;
                 width: 50px;
                 text-align: center;
                 box-sizing: border-box;
-                padding:12px;
+                line-height: 50px;
                 margin: auto;
                 color: white;
             }
             .date-time {
-                margin: auto 0 auto 10px;
                 color: #585e61;
                 span {
                     display: block;}
@@ -109,7 +122,8 @@ header {
 
         .mssg-block {
             margin-left:15px;
-            width: 595px;
+            flex-grow: 1;
+            margin-right: 15px;
                 .author-name {
                     font-size: 14px;
                 
