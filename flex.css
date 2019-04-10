@@ -55,6 +55,7 @@ header {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background-color: #2b5278;
+  position: relative;
 }
 
 header h1 {
@@ -64,11 +65,25 @@ header h1 {
   margin-bottom: 5px;
 }
 
-header p {
+header span {
   margin: 0;
   display: inline-block;
   margin-right: 20px;
   color: #c2c2c2;
+}
+
+header button {
+  position: absolute;
+  right: 0;
+  top: 10px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+header button i {
+  font-size: 24px;
+  color: #5a98d8;
 }
 
 .mssg-window {
@@ -110,9 +125,10 @@ header p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  padding: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -126,13 +142,12 @@ header p {
   text-align: center;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 12px;
+  line-height: 50px;
   margin: auto;
   color: white;
 }
 
 .mssg-window .mssg .mssg-info .date-time {
-  margin: auto 0 auto 10px;
   color: #585e61;
 }
 
@@ -142,7 +157,10 @@ header p {
 
 .mssg-window .mssg .mssg-block {
   margin-left: 15px;
-  width: 595px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin-right: 15px;
 }
 
 .mssg-window .mssg .mssg-block .author-name {
